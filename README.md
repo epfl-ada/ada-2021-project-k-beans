@@ -25,8 +25,8 @@ To assign sentiment scores to each quotation we will mainly use sentiment_analyz
 **Week 4**: Refine the plots, learn how to use GitHub pages, start with the data story  
 **Week 5**: Finish the data story  
 ## Organization within the team
-**Week 1**: Dani and Marko work on data cleaning and developing the regular expression while the Dewmini and Mauro work on homework 2.  
-**Week 2**: Everybody works on the homework. In the meantime we run the code for computing sentiment and profanity scores on the entire data.  
+**Week 1**: Dani and Marko work on data cleaning and developing the regular expression while the Dewmini and Mauro start working on homework 2.  
+**Week 2**: Everybody works on the homework. In the meantime, we run the code for computing sentiment and profanity scores on the entire data.  
 **Week 3**: Dewmini and Dani work on speaker-level analysis, Mauro analyzes profanity with respect to news outlets, while Marko explores the relations between sentiment and profanity in the quotes.  
 **Week 4**: We firstly meet to discuss about potential improvements of the plots, develop the outline of the data story and select the theme. We then split in two pairs. Dewmini and Marko work on the story aspect while Dani and Mauro work on visual appearence.  
 **Week 5**: Everyone works on refining the data story.  
