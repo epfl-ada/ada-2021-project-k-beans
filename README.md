@@ -17,12 +17,16 @@ To identify obscene quotes, we will use [profanity_check](https://pypi.org/proje
 ### Removing censorship
 In the news swearwords are often censored (mostly by leaving only the first letter of a swearword and replacing the rest with asterisks or dashes), which can lead to decrease in recall of profanity classifier. Because of this we will use regular expressions to remove censorship from often censored words.
 ### Sentiment analysis
-To assign sentiment scores to each quotation we will mainly use sentiment_analyzer implemented as a part of SparkNLP library.  Furthermore we aim to perform regressional analysis between sentiment of the quote and its profanity probability. For this we will use statsmodels. Aside from SparkNLP, we will experiment with EMPATH and AFFIN lexicons.
+To assign sentiment scores to each quotation we will mainly use sentiment_analyzer implemented as a part of SparkNLP library.  Furthermore we aim to perform regression analysis between sentiment of the quote and its profanity probability. For this we will use statsmodels. Aside from SparkNLP, we will experiment with EMPATH and AFFIN lexicons.
 ## Proposed timeline
-1. **Week 1** : Develop the regular expression for removing censorship from the data
-2. **Week 2**: Assign sentiment and profanity scores to all the quotes in the data
-3. **Week 3**: Expand the initial analysis on the entire dataset, visualize the data, answer the research questions,
-4. **Week 4**: Refine the plots, learn how to use GitHub pages, profanity literature research
-5. **Week 5**: Develop the data story
+**Week 1** : Develop the regular expression for removing censorship from the data, data cleaning
+**Week 2**: Assign sentiment and profanity scores to all the quotes in the data
+**Week 3**: Expand the initial analysis on the entire dataset, visualize the data, answer the research questions
+**Week 4**: Refine the plots, learn how to use GitHub pages, start with the data story
+**Week 5**: Finish the data story
 ## Organization within the team
-
+**Week 1**: Dani and Marko work on data cleaning and developing the regular expression while the Dewmini and Mauro work on homework 2.
+**Week 2**: Everybody works on the homework. In the meantime we run the code for computing sentiment and profanity scores on the entire data.
+**Week 3**: Dewmini and Dani work on speaker-level analysis, Mauro analyzes profanity with respect to news outlets, while Marko explores the relations between sentiment and profanity in the quotes.
+**Week 4**: We firstly meet to discuss about potential improvements of the plots, develop the outline of the data story and select the theme. We then split in two pairs. Dewmini and Marko work on the story aspect while Dani and Mauro work on visual appearence.
+**Week 5**: Everyone works on refining the data story.
