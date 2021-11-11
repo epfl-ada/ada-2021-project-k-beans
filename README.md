@@ -24,6 +24,5 @@ To assign sentiment scores to each quotation we will mainly use sentiment_analyz
 3. **Week 3**: Expand the initial analysis on the entire dataset, visualize the data, answer the research questions,
 4. **Week 4**: Refine the plots, learn how to use GitHub pages, profanity literature research
 5. **Week 5**: Develop the data story
-6. **Week 6**: Refine the datastory
 ## Organization within the team
 
