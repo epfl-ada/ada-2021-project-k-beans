@@ -23,6 +23,7 @@ In the news swearwords are often censored (mostly by leaving only the first lett
 ### Sentiment analysis
 To assign sentiment scores to each quotation we will mainly use a sentiment analyzer implemented as a part of [SparkNLP](https://nlp.johnsnowlabs.com/) library.  Furthermore we aim to perform regression analysis between sentiment of the quote and its profanity probability. For this we will use statsmodels. Aside from SparkNLP, we will include linguistic categories obtained from [EMPATH](https://github.com/Ejhfast/empath-client) to our analysis.
 
+### Proposed timeline
 **Week 1** : Develop the regular expression for removing censorship from the data, data cleaning  
 **Week 2**: Assign sentiment and profanity scores to all the quotes in the data  
 **Week 3**: Expand the initial analysis on the entire dataset, visualize the data, answer the research questions  
