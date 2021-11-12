@@ -1,6 +1,6 @@
 # !#$@: An obscene journey through quotations in media
 ## Abstract
-The perception and use of profanity depends on the situation and differs from person to person. While swearing is relatively common and sometimes even welcomed in a relaxed environment, the use of such language is mostly frowned upon in a workplace or public spaces. This is why we are not likely to encounter it while reading the news. Still, heated debates and unexpected events can inspire the appearance of obscene language even in more formal settings. To better understand the circunstances in which profanity appears in media, we will explore Quotebank, a large and heterogeneous dataset of quotes from media. We will focus mainly on obscene quotes identified by a machine learning model. Our main goal is to analyze the distribution of such quotations through time and to examine their presence with respect to the attributes of the speakers who uttered them and the media outlets who featured those speakers.
+The perception and use of profanity depend on the situation and differ from person to person. While swearing is relatively common and sometimes even welcomed in a relaxed environment, the use of such language is mostly frowned upon in a workplace or public spaces. This is why we are not likely to encounter it while reading the news. Still, heated debates and unexpected events can inspire the appearance of obscene language even in more formal settings. To better understand the circumstances in which profanity appears in media, we will explore Quotebank, a large and heterogeneous dataset of quotes from media. We will focus mainly on obscene quotes identified by a machine learning model. Our main goal is to analyze the distribution of such quotations through time and to examine their presence with respect to the attributes of the speakers who uttered them and the media outlets who featured those speakers.
 
 ## Research questions
 1.  What is the overall distribution of obscene quotes?
@@ -22,6 +22,10 @@ To identify obscene quotes, we will use [profanity_check](https://pypi.org/proje
 In the news swearwords are often censored (mostly by leaving only the first letter of a swearword and replacing the rest with asterisks or dashes), which can lead to decrease in recall of profanity classifier. Because of this we will use regular expressions to remove censorship from often censored words.
 ### Sentiment analysis
 To assign sentiment scores to each quotation we will mainly use a sentiment analyzer implemented as a part of [SparkNLP](https://nlp.johnsnowlabs.com/) library.  Furthermore, we aim to perform regression analysis between sentiment of the quote and its profanity probability, for which we will use statsmodels. Aside from SparkNLP, we will include linguistic categories obtained from [EMPATH](https://github.com/Ejhfast/empath-client) to our analysis.
+
+### Analyzing relationships between speaker attributes and quote profanity/sentiments
+
+To analyze the profanity/sentiment distribution of quotes with respect to speaker demographics, we will use standard data analysis techniques such as hypothesis testing, confidence intervals, and regression analysis. For example, we will use confidence intervals to argue that the differences in average profanity across different occupations or genders are statistically significant, and we use regression analysis to identify age dependencies.
 
 ## Proposed timeline
 **Week 1** : Develop the regular expression for removing censorship from the data, data cleaning  
