@@ -10,8 +10,10 @@ The perception and use of profanity depends on the situation and differs from pe
 5.  What is the relationship between profanity and sentiment of the quotes?
 
 ## Additional datasets
-1. To obtain attributes of the speakers we will use the `speaker_attributes.parquet` dataset prepared by the teaching staff.
+To obtain attributes of the speakers we will use the `speaker_attributes.parquet` dataset prepared by the teaching staff. The speaker attributes were obtained from [WikiData](https://www.wikidata.org/wiki/Wikidata:Main_Page).
+
 ## Methods
+
 ### Data processing
 Due to size of the data, it is not possible to load it entirely in memory, which is why we will mostly use [PySpark](http://spark.apache.org/docs/latest/api/python/) for data processing. The aggregated results that we obtain with spark will then be converted to Pandas dataframe so that they can be visualized.
 ### Identifying quotes with profanity
