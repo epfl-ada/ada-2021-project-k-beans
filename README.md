@@ -21,12 +21,12 @@ To identify obscene quotes, we will use [profanity_check](https://pypi.org/proje
 ### Removing censorship
 In the news swearwords are often censored (mostly by leaving only the first letter of a swearword and replacing the rest with asterisks or dashes), which can lead to decrease in recall of profanity classifier. Because of this we will use regular expressions to remove censorship from often censored words.
 ### Sentiment analysis
-To assign sentiment scores to each quotation we will mainly use a sentiment analyzer implemented as a part of [SparkNLP](https://nlp.johnsnowlabs.com/) library.  Furthermore we aim to perform regression analysis between sentiment of the quote and its profanity probability. For this we will use statsmodels. Aside from SparkNLP, we will include linguistic categories obtained from [EMPATH](https://github.com/Ejhfast/empath-client) to our analysis.
+To assign sentiment scores to each quotation we will mainly use a sentiment analyzer implemented as a part of [SparkNLP](https://nlp.johnsnowlabs.com/) library.  Furthermore, we aim to perform regression analysis between sentiment of the quote and its profanity probability, for which we will use statsmodels. Aside from SparkNLP, we will include linguistic categories obtained from [EMPATH](https://github.com/Ejhfast/empath-client) to our analysis.
 
 ## Proposed timeline
 **Week 1** : Develop the regular expression for removing censorship from the data, data cleaning  
 **Week 2**: Assign sentiment and profanity scores to all the quotes in the data  
-**Week 3**: Expand the initial analysis on the entire dataset, explore the relationship between sentiment and preofanity, visualize the data, answer the research questions  
+**Week 3**: Expand the initial analysis on the entire dataset, explore the relationship between sentiment and profanity, visualize the data, answer the research questions  
 **Week 4**: Refine the plots, learn how to use GitHub pages, start with the data story  
 **Week 5**: Finish the data story  
 
