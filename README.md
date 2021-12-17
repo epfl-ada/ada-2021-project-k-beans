@@ -25,6 +25,12 @@ We also compute Empath's lexical categories and analyze them with respect to pro
 ### Analyzing speaker attributes and quote profanity
 To analyze the profanity distribution of quotes with respect to speaker demographics, we will use data visualization techniques such as bar plots accompanied with confidence intervals. We use confidence intervals to argue that the differences in average profanity across different occupations or genders are statistically significant.
 
+## Repository structure
+ - `ExploratoryDataAnalysis.ipynb` - includes an extensive exploratory data analysis
+ - `DataStoryPlots` - contains most of the plots included in the data story
+ - `milestone2.ipynb` - old notebook from project milestone 2
+ - `QuotationLevelAnalysis` - temporal analysis and general statistics
+
 ## Proposed timeline
 **Week 1**: Develop the regular expression for removing censorship from the data, data cleaning  
 **Week 2**: Assign sentiment and profanity scores to all the quotes in the data  
@@ -40,7 +46,7 @@ To analyze the profanity distribution of quotes with respect to speaker demograp
 **Week 5**: Everyone works on refining the data story.
 
 ## Who did what
-Dani: speaker-level analysis, data story
+Dani: speaker-level analysis, data story  
 Dewmini: general exploratory data analysis, speaker-level analysis, data visualization  
 Marko: data preprocessing, quotation-level analysis, news outlet analysis  
 Mauro: news outlet analysis, data story  
