@@ -5,9 +5,9 @@ The perception and use of profanity depend on the situation and differ from pers
 ## Research questions
 1.  What is the overall distribution of obscene quotes?
 2.  How does the use of profanity behave through time? Can we relate the use of profanity to certain events?
-3.  Which speakers and groups of speakers are most likely to use obscene language? Are there any differences in the distribution of profanity with respect to occupation, gender, or age of the speaker?
-4.  Which media sources feature vulgar speakers? How does it relate to the nature of the sources and their role?
-5.  What is the relationship between profanity and sentiment of the quotes?
+3.  Which speakers and groups of speakers are most likely to use obscene language? Are there any differences in the distribution of profanity with respect to the occupation or gender of a speaker?
+4.  Which media sources feature vulgar speakers? How does it relate to the nature of the sources and their role? Which media sources censor profanities?
+5.  What are profanities about? Which lexical categories are most represented in the profane quotations?
 
 ## Additional datasets
 To obtain attributes of the speakers we will use the `speaker_attributes.parquet` dataset prepared by the teaching staff. The speaker attributes were obtained from [WikiData](https://www.wikidata.org/wiki/Wikidata:Main_Page).
@@ -17,13 +17,11 @@ To obtain attributes of the speakers we will use the `speaker_attributes.parquet
 ### Data processing
 Due to the size of the data, it is not possible to load it entirely in memory, which is why we will mostly use [PySpark](http://spark.apache.org/docs/latest/api/python/) for data processing. The aggregated results that we obtain with spark will then be converted to Pandas dataframe so that they can be visualized.
 ### Identifying quotes with profanity
-To identify obscene quotes, we will use [profanity_check](https://pypi.org/project/alt-profanity-check/). This tool is based on an SVM model. It takes a list of strings as an input and outputs the probability that the string is obscene. In this case, we have observed that applying the tool to the quotations using PySpark is not feasible because profanity_check is then applied on one row at a time. The tool works way faster when applied to a larger list of strings, which is why in this case we opt for assigning the profanity scores on larger chunks, for which we use Pandas.
-### Removing censorship
-In the news, swearwords are often censored (mostly by leaving only the first letter of a swearword and replacing the rest with asterisks or dashes), which can lead to a decrease in recall of the profanity classifier. Because of this, we will use regular expressions to remove censorship from often censored words.
-### Sentiment analysis
-To assign sentiment scores to each quotation we will mainly use a sentiment analyzer implemented as a part of [SparkNLP](https://nlp.johnsnowlabs.com/) library.  Furthermore, we aim to perform regression analysis between the sentiment of the quote and its profanity probability, for which we will use statsmodels. We will also experiment with lexical categories obtained from [EMPATH](https://github.com/Ejhfast/empath-client) in our analysis.
-### Analyzing relationships between speaker attributes and quote profanity/sentiments
-To analyze the profanity/sentiment distribution of quotes with respect to speaker demographics, we will use standard data analysis techniques such as hypothesis testing, confidence intervals, and regression analysis. For example, we will use confidence intervals to argue that the differences in average profanity across different occupations or genders are statistically significant, and we use regression analysis to identify age dependencies.
+To identify obscene quotes, we use a combination of approaches. Firstly, we will employ an SVM-based machine learning model [profanity_check](https://pypi.org/project/alt-profanity-check/) to compute profanity scores (a real number between 0 and 1). Although the author reports high results on the Wikipedia comments dataset, we don't know a thing about its performance on Quotebank. Thus, we label as profanities only the quotations with a profanity score higher than 0.9. Aside from that, since some censored quotes may be difficult to handle for our model, we use regular expressions to identify and remove censorship from the quotes, labeling all the censored quotations as profane. Finally, since we opted for a high profanity score threshold, we missed quite a few true positives. To alleviate this we then use a large list of profane words from which we first select the words with a profanity_check's profanity score higher than 0.5, and then further filter the set manually.
+### Empath
+We also compute Empath's lexical categories and analyze them with respect to profane and non-profane quotes. 
+### Analyzing speaker attributes and quote profanity
+To analyze the profanity distribution of quotes with respect to speaker demographics, we will use data visualization techniques such as bar plots accompanied with confidence intervals. We use confidence intervals to argue that the differences in average profanity across different occupations or genders are statistically significant.
 
 ## Proposed timeline
 **Week 1**: Develop the regular expression for removing censorship from the data, data cleaning  
@@ -37,4 +35,11 @@ To analyze the profanity/sentiment distribution of quotes with respect to speake
 **Week 2**: Everybody works on the homework. In the meantime, we run the code for computing sentiment and profanity scores on the entire data.  
 **Week 3**: Dewmini and Dani work on speaker-level analysis, Mauro analyzes profanity with respect to news outlets, while Marko explores the relations between sentiment and profanity in the quotes.  
 **Week 4**: The team firstly meets to discuss potential improvements of the plots, develop the outline of the data story and select the GitHub Pages theme. We then split into two pairs. Dewmini and Marko work on the story aspect while Dani and Mauro work on visual appearance.  
-**Week 5**: Everyone works on refining the data story.  
+**Week 5**: Everyone works on refining the data story.
+
+## Who did what
+Dani:
+Dewmini:
+Marko: Data preprocessing, temporal analysis, news outlet analysis
+Mauro:
+
