@@ -1,4 +1,6 @@
 # !#$@: An obscene journey through quotations in media
+You can find the data story [here](https://danihinjos.github.io/ADA_Project/)
+
 ## Abstract
 The perception and use of profanity depend on the situation and differ from person to person. While swearing is relatively common and sometimes even welcomed in a relaxed environment, the use of such language is mostly frowned upon in a workplace or public spaces. This is why we are not likely to encounter it while reading the news. Still, heated debates and unexpected events can inspire the appearance of obscene language even in more formal settings. To better understand the circumstances in which profanity appears in media, we will explore Quotebank, a large and heterogeneous dataset of quotes from media. We will focus mainly on obscene quotes identified by a machine learning model. Our main goal is to analyze the distribution of such quotations through time and to examine their presence with respect to the attributes of the speakers who uttered them and the media outlets who featured those speakers.
 
@@ -38,8 +40,8 @@ To analyze the profanity distribution of quotes with respect to speaker demograp
 **Week 5**: Everyone works on refining the data story.
 
 ## Who did what
-Dani:
-Dewmini:
-Marko: Data preprocessing, temporal analysis, news outlet analysis
-Mauro:
+Dani: speaker-level analysis, data story
+Dewmini: general exploratory data analysis, speaker-level analysis, data visualization  
+Marko: data preprocessing, quotation-level analysis, news outlet analysis  
+Mauro: news outlet analysis, data story  
 
