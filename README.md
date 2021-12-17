@@ -30,6 +30,7 @@ To analyze the profanity distribution of quotes with respect to speaker demograp
  - `SpeakerAttributesNewsOutlets.ipynb` - contains some speaker and news domain-level analysis
  - `milestone2.ipynb` - old notebook from project milestone 2
  - `QuotationLevelAnalysis.ipynb` - temporal analysis and general statistics
+ - `Preprocessing.ipynb` - data cleaning, censorship removal, calculating the scores
 
 ## Proposed timeline
 **Week 1**: Develop the regular expression for removing censorship from the data, data cleaning  
