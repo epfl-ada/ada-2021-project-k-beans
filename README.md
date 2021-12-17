@@ -27,9 +27,9 @@ To analyze the profanity distribution of quotes with respect to speaker demograp
 
 ## Repository structure
  - `ExploratoryDataAnalysis.ipynb` - includes an extensive exploratory data analysis
- - `DataStoryPlots` - contains most of the plots included in the data story
+ - `SpeakerAttributesNewsOutlets.ipynb` - contains some speaker and news domain-level analysis
  - `milestone2.ipynb` - old notebook from project milestone 2
- - `QuotationLevelAnalysis` - temporal analysis and general statistics
+ - `QuotationLevelAnalysis.ipynb` - temporal analysis and general statistics
 
 ## Proposed timeline
 **Week 1**: Develop the regular expression for removing censorship from the data, data cleaning  
